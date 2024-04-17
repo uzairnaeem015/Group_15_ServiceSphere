@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms';
+import { UntypedFormGroup,UntypedFormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 
 export class RegisterComponent implements OnInit {
   
-  registerForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    gender : new FormControl(''),
-    username: new FormControl(''),
-    password : new FormControl(''),
-    confirmPassword: new FormControl('')
+  registerForm = new UntypedFormGroup({
+    name: new UntypedFormControl(''),
+    email: new UntypedFormControl(''),
+    gender : new UntypedFormControl(''),
+    username: new UntypedFormControl(''),
+    password : new UntypedFormControl(''),
+    confirmPassword: new UntypedFormControl('')
   });
 
   isAlpha(text: string) {

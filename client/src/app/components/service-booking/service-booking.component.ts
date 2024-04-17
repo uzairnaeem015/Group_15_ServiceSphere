@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms';
+import { UntypedFormGroup,UntypedFormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { GlobalConstants } from 'src/app/common/global-constants';
@@ -11,9 +11,9 @@ import { GlobalConstants } from 'src/app/common/global-constants';
 })
 export class ServiceBookingComponent implements OnInit {
 
-  bookingForm = new FormGroup({
-    date: new FormControl(''),
-    time: new FormControl('')
+  bookingForm = new UntypedFormGroup({
+    date: new UntypedFormControl(''),
+    time: new UntypedFormControl('')
   });
 
   serviceId = 0;
